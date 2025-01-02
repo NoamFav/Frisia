@@ -348,8 +348,7 @@ public class Game {
                 launcher.showMenu();
             }
 
-            // OPTIONAL: Fade out the stage for a smoother close
-            // fadeOutAndClose(gameStage, 300);
+            fadeOutAndClose(gameStage, 300);
 
             gameStage.close();
         }

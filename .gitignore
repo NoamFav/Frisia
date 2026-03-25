@@ -1,10 +1,8 @@
 
-.DS_Store
 /target/
 /.idea
 /.vscode
 
-.DS_Store
 .classpath
 .factorypath
 .project

@@ -139,7 +139,7 @@ public class BotManager {
     private void trainModel(List<Experience> batch) {
         double totalLoss = 0.0;
         for (Experience experience : batch) {
-            Map<Vector2i, Double> qValues = boardState.getBotModel().predict(experience.state);
+            Map<Vector2i, Double> _ = boardState.getBotModel().predict(experience.state);
             double target = experience.reward;
             if (!experience.isTerminal) {
                 Map<Vector2i, Double> nextQValues =

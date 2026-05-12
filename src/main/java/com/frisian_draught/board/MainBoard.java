@@ -41,7 +41,6 @@ public class MainBoard {
 
     public MainBoard() {
         boardRendered.setMoveManager(moveManager);
-        moveManager.setBotManager(botManager);
         moveManager.setBoardRendered(boardRendered);
         botManager.setBoardRendered(boardRendered);
         botManager.setMoveManager(moveManager);

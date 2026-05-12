@@ -246,10 +246,6 @@ public class BoardRendered {
                 scaleTransition.play();
 
                 activeTransitions.put(pawn, scaleTransition);
-            } else if (pawnView != null) {
-                // Reset the pawn's scale for non-movable pawns
-                pawnView.setScaleX(1.0);
-                pawnView.setScaleY(1.0);
             }
         }
     }

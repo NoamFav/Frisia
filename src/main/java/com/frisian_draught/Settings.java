@@ -16,7 +16,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
-import java.security.PublicKey;
 
 /**
  * The Settings class is responsible for managing the settings of the application. Handles the
@@ -160,8 +159,6 @@ public class Settings {
         settingsStage.setTitle("Settings");
         Launcher.registerScene(settingScene);
         settingsStage.setScene(settingScene);
-
-
 
         // Make the settings window modal
         settingsStage.initModality(Modality.APPLICATION_MODAL);

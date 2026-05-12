@@ -30,7 +30,6 @@ public class MoveManager {
     private final BoardState boardState;
     private final MainBoard mainBoard;
     private BoardRendered boardRendered;
-    private BotManager botManager;
 
     private TriConsumer<Pawn, Vector2i, Boolean> onPawnMovedCallback;
 
@@ -41,10 +40,6 @@ public class MoveManager {
 
     public void setOnPawnMovedCallback(TriConsumer<Pawn, Vector2i, Boolean> callback) {
         this.onPawnMovedCallback = callback;
-    }
-
-    public void setBotManager(BotManager botManager) {
-        this.botManager = botManager;
     }
 
     public void setBoardRendered(BoardRendered boardRendered) {
@@ -256,7 +251,7 @@ public class MoveManager {
             processCaptureSteps(pawn, path);
             processAfterCaptureMove(pawn, path); // Finalize the move
         }
-        //reset nonCaptures for all other kings:
+        // reset nonCaptures for all other kings:
         boardState.getPawns().stream()
                 .filter(Pawn::isKing)
                 .filter(pawn1 -> pawn1.isWhite() == pawn.isWhite())
@@ -434,7 +429,7 @@ public class MoveManager {
         } else {
             promotePawnIfNeeded(pawn, landingPos);
         }
-        //reset nonCaptures for all other kings:
+        // reset nonCaptures for all other kings:
         boardState.getPawns().stream()
                 .filter(pawn1 -> pawn1.getPosition() != pawn.getPosition())
                 .filter(pawn1 -> pawn1.isWhite() == pawn.isWhite())
@@ -481,8 +476,8 @@ public class MoveManager {
         List<Vector2i> capturedPositions = new ArrayList<>();
 
         int[][] directions = {
-                {1, 1}, {-1, 1}, {1, -1}, {-1, -1},
-                {0, 2}, {0, -2}, {2, 0}, {-2, 0}
+            {1, 1}, {-1, 1}, {1, -1}, {-1, -1},
+            {0, 2}, {0, -2}, {2, 0}, {-2, 0}
         };
 
         for (int[] dir : directions) {
@@ -594,6 +589,7 @@ public class MoveManager {
     public void checkGameOver() {
         checkGameOver(false);
     }
+
     /** Checks if the game is over. */
     public void checkGameOver(boolean canBeDraw) {
         // Check if the opposing player has any pawns
@@ -607,7 +603,10 @@ public class MoveManager {
                         // Determine the winner
                         String winner = "Draw";
                         if (!oppositePlayerHasPawns) {
-                            winner = boardState.isWhiteTurn() ? "Player 2 (Black)" : "Player 1 (White)";
+                            winner =
+                                    boardState.isWhiteTurn()
+                                            ? "Player 2 (Black)"
+                                            : "Player 1 (White)";
                         }
 
                         if (boardState.isMultiplayer()) {
@@ -615,15 +614,15 @@ public class MoveManager {
                                 winner =
                                         "You"
                                                 + (boardState.isWhiteTurn()
-                                                ? " (White)"
-                                                : " (Black)");
+                                                        ? " (White)"
+                                                        : " (Black)");
                                 Launcher.user.wonGame();
                             } else {
                                 winner =
                                         "Opponent"
                                                 + (boardState.isWhiteTurn()
-                                                ? " (White)"
-                                                : " (Black)");
+                                                        ? " (White)"
+                                                        : " (Black)");
                                 Launcher.user.lostGame();
                             }
                         }

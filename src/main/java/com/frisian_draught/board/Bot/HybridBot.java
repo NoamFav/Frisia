@@ -111,7 +111,7 @@ public class HybridBot extends Bot {
                         }
 
                         // Initialize Minimax with DQN model for evaluation
-                        HybridAgent miniMaxTree = new HybridAgent(currentState, dqnModel);
+                        HybridAgent miniMaxTree = new HybridAgent(dqnModel);
                         Move[] selectedMove = {
                             miniMaxTree.getBestMove(currentState, 3, boardState.isWhiteTurn())
                         };

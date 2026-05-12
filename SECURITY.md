@@ -18,7 +18,7 @@ If you are using an unsupported version, please update to the latest stable rele
 If you discover a security vulnerability in Frisian Draught, please report it responsibly by following these steps:
 
 1. **Do not disclose it publicly.** Security vulnerabilities should be reported privately.
-2. **Contact us via email:** Send an email to [your-email@example.com](mailto:your-email@example.com) with the following details:
+2. **Contact us via email:** Send an email to [noam@favier.eu](mailto:noam@favier.eu) with the following details:
    - A detailed description of the vulnerability.
    - Steps to reproduce the issue.
    - Potential impact and severity.

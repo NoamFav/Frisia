@@ -3,7 +3,7 @@
 <div align="center">
 
 <img src="https://img.shields.io/badge/java-23+-ED8B00.svg?style=for-the-badge&logo=openjdk" alt="Java">
-<img src="https://img.shields.io/badge/javafx-23-blue.svg?style=for-the-badge" alt="JavaFX">
+<img src="https://img.shields.io/badge/javafx-22.0.1-blue.svg?style=for-the-badge" alt="JavaFX">
 <img src="https://img.shields.io/badge/maven-3.9-red.svg?style=for-the-badge&logo=apachemaven" alt="Maven">
 <img src="https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge" alt="License">
 
@@ -25,7 +25,7 @@ Frisia is a full-featured implementation of Frisian Draughts built with JavaFX â
 |-------------|---------|
 | Java | 23+ |
 | Maven | 3.8+ |
-| JavaFX | 23 (included via Maven) |
+| JavaFX | 22.0.1 (included via Maven) |
 | Graphics | OpenGL 2.1+ |
 
 ---

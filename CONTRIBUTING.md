@@ -11,8 +11,8 @@ Thank you for your interest in contributing to Frisian Draught! Please follow th
 
 2. **Clone Your Fork:**  
    ```bash
-   git clone https://github.com/NoamFav/frisian-draught.git
-   cd frisian-draught
+   git clone https://github.com/NoamFav/Frisia.git
+   cd Frisia
    ```
 
 3. **Create a New Branch:**  
@@ -45,7 +45,7 @@ Thank you for your interest in contributing to Frisian Draught! Please follow th
 
 ## Reporting Issues
 
-If you encounter any issues, please check the [issue tracker](https://github.com/your-repo/frisian-draught/issues) to see if it has already been reported. If not, create a new issue with the following details:
+If you encounter any issues, please check the [issue tracker](https://github.com/NoamFav/Frisia/issues) to see if it has already been reported. If not, create a new issue with the following details:
 
 - A clear and concise title.
 - Steps to reproduce the issue.

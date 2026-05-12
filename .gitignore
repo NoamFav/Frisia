@@ -6,8 +6,12 @@
 .classpath
 .factorypath
 .project
+.settings/
 um-project-game.iml
 target/
+dependency-reduced-pom.xml
+Icon
+Icon?
 
 ### Intellij+all
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider

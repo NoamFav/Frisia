@@ -5,7 +5,7 @@ module com.frisian_draught {
     requires javafx.controls;
     requires javafx.web;
     requires transitive javafx.graphics;
-    requires org.controlsfx.controls;
+    requires transitive org.controlsfx.controls;
     requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;

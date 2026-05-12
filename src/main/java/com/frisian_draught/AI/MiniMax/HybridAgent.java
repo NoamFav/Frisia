@@ -1,29 +1,26 @@
 package com.frisian_draught.AI.MiniMax;
 
+import com.frisian_draught.AI.DQNModel;
 import com.frisian_draught.board.GameState;
 import com.frisian_draught.board.Move;
-import com.frisian_draught.AI.DQNModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The HybridAgent class combines the MiniMax algorithm with a Deep Q-Network (DQN) model
- * to determine the best move in a game state.
+ * The HybridAgent class combines the MiniMax algorithm with a Deep Q-Network (DQN) model to
+ * determine the best move in a game state.
  */
 public class HybridAgent {
 
-    private final GameState rootState;
     private final DQNModel dqnModel;
 
     /**
      * Constructs a HybridAgent with the given root state and DQN model.
      *
-     * @param rootState the initial game state
      * @param dqnModel the DQN model for evaluating game states
      */
-    public HybridAgent(GameState rootState, DQNModel dqnModel) {
-        this.rootState = rootState;
+    public HybridAgent(DQNModel dqnModel) {
         this.dqnModel = dqnModel;
     }
 
@@ -36,7 +33,14 @@ public class HybridAgent {
      * @return the best move found
      */
     public Move getBestMove(GameState state, int depth, boolean maximizingPlayer) {
-        MMResult result = minimax(state.clone(), depth, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, maximizingPlayer, new ArrayList<>());
+        MMResult result =
+                minimax(
+                        state.clone(),
+                        depth,
+                        Double.NEGATIVE_INFINITY,
+                        Double.POSITIVE_INFINITY,
+                        maximizingPlayer,
+                        new ArrayList<>());
         return result.getMoves().isEmpty() ? null : result.getMoves().get(0);
     }
 
@@ -51,7 +55,13 @@ public class HybridAgent {
      * @param moveSequence the sequence of moves leading to the current state
      * @return the result of the MiniMax evaluation
      */
-    private MMResult minimax(GameState state, int depth, double alpha, double beta, boolean maximizingPlayer, List<Move> moveSequence) {
+    private MMResult minimax(
+            GameState state,
+            int depth,
+            double alpha,
+            double beta,
+            boolean maximizingPlayer,
+            List<Move> moveSequence) {
         if (depth == 0 || state.isTerminal()) {
             double score = dqnModel.evaluate(state);
             return new MMResult(score, moveSequence);
@@ -62,15 +72,21 @@ public class HybridAgent {
             List<Move> bestMoves = new ArrayList<>();
 
             List<Move> possibleMoves = state.generateMoves();
-            possibleMoves.sort((m1, m2) -> Double.compare(dqnModel.predict(state).getOrDefault(m2.getEndPosition(), 0.0),
-                    dqnModel.predict(state).getOrDefault(m1.getEndPosition(), 0.0)));
+            possibleMoves.sort(
+                    (m1, m2) ->
+                            Double.compare(
+                                    dqnModel.predict(state).getOrDefault(m2.getEndPosition(), 0.0),
+                                    dqnModel.predict(state)
+                                            .getOrDefault(m1.getEndPosition(), 0.0)));
 
             for (Move move : possibleMoves) {
                 GameState newState = state.simulateMove(move).getNextState();
                 List<Move> newMoveSequence = new ArrayList<>(moveSequence);
                 newMoveSequence.add(move);
 
-                double eval = minimax(newState.clone(), depth - 1, alpha, beta, false, newMoveSequence).getScore();
+                double eval =
+                        minimax(newState.clone(), depth - 1, alpha, beta, false, newMoveSequence)
+                                .getScore();
                 if (eval > maxEval) {
                     maxEval = eval;
                     bestMoves = newMoveSequence;
@@ -85,15 +101,21 @@ public class HybridAgent {
             List<Move> bestMoves = new ArrayList<>();
 
             List<Move> possibleMoves = state.generateMoves();
-            possibleMoves.sort((m1, m2) -> Double.compare(dqnModel.predict(state).getOrDefault(m1.getEndPosition(), 0.0),
-                    dqnModel.predict(state).getOrDefault(m2.getEndPosition(), 0.0)));
+            possibleMoves.sort(
+                    (m1, m2) ->
+                            Double.compare(
+                                    dqnModel.predict(state).getOrDefault(m1.getEndPosition(), 0.0),
+                                    dqnModel.predict(state)
+                                            .getOrDefault(m2.getEndPosition(), 0.0)));
 
             for (Move move : possibleMoves) {
                 GameState newState = state.simulateMove(move).getNextState();
                 List<Move> newMoveSequence = new ArrayList<>(moveSequence);
                 newMoveSequence.add(move);
 
-                double eval = minimax(newState.clone(), depth - 1, alpha, beta, true, newMoveSequence).getScore();
+                double eval =
+                        minimax(newState.clone(), depth - 1, alpha, beta, true, newMoveSequence)
+                                .getScore();
                 if (eval < minEval) {
                     minEval = eval;
                     bestMoves = newMoveSequence;

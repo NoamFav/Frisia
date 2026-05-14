@@ -212,7 +212,7 @@ public class MoveManager {
         for (CapturePath path : maxCapturePaths) {
             Vector2i landingPos = path.getLastPosition();
 
-            Rectangle square = boardRendered.createHighlightSquare(Color.RED);
+            Rectangle square = boardRendered.createHighlightSquare(Color.web("#f87171", 0.65));
             if (highlight) {
                 boardState.getBoard().add(square, landingPos.x, landingPos.y);
             }
@@ -345,7 +345,7 @@ public class MoveManager {
         }
         BiConsumer<Integer, Integer> highlightMove =
                 (newX, newY) -> {
-                    Rectangle square = boardRendered.createHighlightSquare(Color.GREEN);
+                    Rectangle square = boardRendered.createHighlightSquare(Color.web("#4ade80", 0.55));
                     if (highlighting) {
                         boardState.getBoard().add(square, newX, newY);
                     }

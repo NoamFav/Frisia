@@ -2,10 +2,10 @@
    ROOT STYLE
 --------------------------- */
 .root {
-  -fx-background-color: linear-gradient(to bottom, #fefefe, #f5f5f5);
+  -fx-background-color: linear-gradient(to bottom, #faf8f5, #f2f0ec);
   -fx-font-family: "Inter", sans-serif;
   -fx-font-size: 14px;
-  -fx-text-fill: #333333; /* Dark text for readability on light background */
+  -fx-text-fill: #1e1e2e;
 
   /* Remove default focus color outlines */
   -fx-focus-color: transparent;
@@ -16,16 +16,16 @@
 /*       LOADING SCREEN       */
 /* -------------------------- */
 #loading-root {
-  -fx-background-color: linear-gradient(to bottom, #fefefe, #f5f5f5);
+  -fx-background-color: linear-gradient(to bottom, #faf8f5, #f2f0ec);
 }
 
 /* Dotted Circle Styling */
 .dot-circle .dot {
-  -fx-fill: #84c5ff; /* Soft light blue color */
+  -fx-fill: #6366f1; /* Soft light blue color */
   -fx-radius: 5;
   -fx-effect: dropshadow(
     gaussian,
-    rgba(130, 180, 255, 0.4),
+    rgba(99, 102, 241, 0.3),
     10,
     0.5,
     0,
@@ -34,7 +34,7 @@
 }
 
 .dot-circle .dot:hover {
-  -fx-fill: #a8d5ff;
+  -fx-fill: #8b92f8;
   -fx-effect: dropshadow(
     gaussian,
     rgba(160, 200, 255, 0.6),
@@ -62,8 +62,8 @@
 
 /* Pulsing Text Animation */
 #loading-text:hover {
-  -fx-fill: #5588ff;
-  -fx-effect: dropshadow(gaussian, rgba(100, 150, 255, 0.3), 8, 0.4, 0, 2);
+  -fx-fill: #6366f1;
+  -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.3), 8, 0.4, 0, 2);
 }
 
 /* --------------------------
@@ -135,10 +135,10 @@
 }
 
 .button:hover {
-  -fx-background-color: linear-gradient(to right, #a8d5ff, #badfff);
+  -fx-background-color: linear-gradient(to right, #8b92f8, #a5b4fc);
   -fx-text-fill: #333333;
-  -fx-border-color: #84c5ff;
-  -fx-effect: dropshadow(gaussian, rgba(100, 150, 245, 0.4), 8, 0.6, 0, 3);
+  -fx-border-color: #6366f1;
+  -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.4), 8, 0.6, 0, 3);
   -fx-transition: all 0.2s ease-in-out;
 }
 
@@ -274,14 +274,14 @@
 }
 
 .board:hover {
-  -fx-background-color: linear-gradient(to bottom, #a8d5ff, #badfff);
-  -fx-effect: dropshadow(gaussian, rgba(100, 150, 245, 0.4), 8, 0.6, 0, 2);
+  -fx-background-color: linear-gradient(to bottom, #8b92f8, #a5b4fc);
+  -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.4), 8, 0.6, 0, 2);
   -fx-transition: all 0.2s ease-in-out;
 }
 
 .board:focused {
-  -fx-border-color: #84c5ff;
-  -fx-effect: dropshadow(gaussian, rgba(130, 180, 255, 0.4), 10, 0.5, 0, 2);
+  -fx-border-color: #6366f1;
+  -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.3), 10, 0.5, 0, 2);
 }
 
 /* --------------------------
@@ -311,12 +311,12 @@
 }
 
 .settings-slider .thumb {
-  -fx-background-color: #a8d5ff; /* Light blue thumb */
+  -fx-background-color: #8b92f8; /* Light blue thumb */
   -fx-background-radius: 10;
-  -fx-effect: dropshadow(gaussian, rgba(100, 150, 245, 0.4), 4, 0.5, 0, 2);
+  -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.4), 4, 0.5, 0, 2);
   -fx-transition: -fx-background-color 0.2s ease-in-out;
 }
 
 .settings-slider .thumb:hover {
-  -fx-background-color: #badfff;
+  -fx-background-color: #a5b4fc;
 }

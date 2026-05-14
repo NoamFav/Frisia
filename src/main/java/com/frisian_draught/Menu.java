@@ -330,11 +330,6 @@ public class Menu {
         MainBoard mainBoard = new MainBoard();
         GridPane liveBoard = mainBoard.getRandomBoard(root, liveGameSize); // Placeholder board
 
-        liveBoard.setOnMouseClicked(
-                _ -> {
-                    Launcher.user.addExperience(1000000); // Shhh, don't tell anyone
-                });
-
         liveGame.getChildren().addAll(liveGameTitle, liveBoard);
         root.getChildren().add(liveGame);
 

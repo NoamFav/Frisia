@@ -237,45 +237,6 @@ public class Game {
         mainBoard.boardState.setBotvsBotBlack(BotFactory.createBot(blackBot, mainBoard));
     }
 
-    /**
-     * public Game(Launcher launcher, MainBoard mainBoard) { this.launcher = launcher;
-     * this.gameStage = new Stage(); this.gameStage.setTitle("Frisian Draughts - Game");
-     * this.movesListGridPane = mainBoard.getMovesListGridPane(); this.mainBoard = mainBoard;
-     * this.isWhiteTurn = mainBoard.boardState.isWhiteTurn() ? Bindings.createBooleanBinding(() ->
-     * true) : Bindings.createBooleanBinding(() -> false);
-     *
-     * <p>// Disable board interaction when loading from PDN
-     * mainBoard.getBoard().setOnMouseClicked(null);
-     *
-     * <p>this.gameRoot = new Pane(); Scene scene = new Scene(gameRoot, Launcher.REF_WIDTH,
-     * Launcher.REF_HEIGHT); Launcher.registerScene(scene);
-     *
-     * <p>// Load CSS URL cssUrl = getClass().getResource(Launcher.DARK_MODE ? "/dark-theme.css" :
-     * "/light-theme.css"); if (cssUrl != null) {
-     * scene.getStylesheets().add(cssUrl.toExternalForm()); } else { System.err.println("Stylesheet
-     * not found"); }
-     *
-     * <p>this.gameStage.setScene(scene);
-     *
-     * <p>// Initialize game player board = mainBoard.getBoard(this.movesListGridPane,
-     * this.gameInfo); if (board == null) { System.err.println("Error: board is null. Please check
-     * getBoard() in MainBoard."); return; } if (!gameRoot.getChildren().contains(board)) {
-     * gameRoot.getChildren().add(board); }
-     *
-     * <p>playerUI(gameRoot, scene, true); playerUI(gameRoot, scene, false); chatUI(gameRoot,
-     * scene); buttonGameLogic(gameRoot, scene); moveList(gameRoot, scene);
-     *
-     * <p>// Fade in effect on first load animateFadeIn(gameRoot, 300);
-     *
-     * <p>// Debounced resizing resizePause = new PauseTransition(Duration.millis(50));
-     * resizePause.setOnFinished(_ -> onResize(gameRoot, scene));
-     *
-     * <p>scene.widthProperty().addListener((_, _, _) -> resizePause.playFromStart());
-     * scene.heightProperty().addListener((_, _, _) -> resizePause.playFromStart());
-     *
-     * <p>// Handle close event this.gameStage.setOnCloseRequest( e -> { e.consume();
-     * showExitConfirmation(); }); }
-     */
     public void showGameWindow() {
         this.gameStage.show();
     }
@@ -1107,7 +1068,6 @@ public class Game {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Propose Draw");
         alert.setHeaderText("Are you sure you want to propose a draw?");
-        alert.setContentText("Are you sure you want to propose a draw?");
         ButtonType acceptButton = new ButtonType("Accept", ButtonData.OK_DONE);
         ButtonType declineButton = new ButtonType("Decline", ButtonData.CANCEL_CLOSE);
         alert.getButtonTypes().setAll(acceptButton, declineButton);
@@ -1115,12 +1075,9 @@ public class Game {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == acceptButton) {
             networkClient.sendMessage("DRAW");
-
             networkClient.close();
-
             gameStage.close();
         }
-        alert.showAndWait();
     }
 
     /**

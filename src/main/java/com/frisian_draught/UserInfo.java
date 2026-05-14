@@ -146,12 +146,12 @@ public class UserInfo {
         winStreak++;
         if (winStreak > highestWinStreak) {
             highestWinStreak = winStreak;
-            if (winStreak >= 3) {
-                addExperience(100);
+            if (winStreak >= 10) {
+                addExperience(500);
             } else if (winStreak >= 5) {
                 addExperience(200);
-            } else if (winStreak >= 10) {
-                addExperience(500);
+            } else if (winStreak >= 3) {
+                addExperience(100);
             }
         }
         addExperience(150);

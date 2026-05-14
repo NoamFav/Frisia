@@ -2,10 +2,10 @@
 /*          ROOT STYLE        */
 /* -------------------------- */
 .root {
-  -fx-background-color: linear-gradient(to bottom, #1f1f1f, #2a2a2a);
+  -fx-background-color: linear-gradient(to bottom, #16161a, #1e1e26);
   -fx-font-family: "Inter", sans-serif;
   -fx-font-size: 14px;
-  -fx-text-fill: #e0e0e0;
+  -fx-text-fill: #e8e8f0;
 
   /* Remove default focus color outlines */
   -fx-focus-color: transparent;
@@ -16,7 +16,7 @@
 /*       LOADING SCREEN       */
 /* -------------------------- */
 #loading-root {
-  -fx-background-color: linear-gradient(to bottom, #1f1f1f, #292929);
+  -fx-background-color: linear-gradient(to bottom, #16161a, #1e1e26);
 }
 
 /* Dotted Circle Styling */
@@ -64,7 +64,7 @@
 /* -------------------------- */
 
 .alert-root {
-  -fx-background-color: linear-gradient(to bottom, #1f1f1f, #292929);
+  -fx-background-color: linear-gradient(to bottom, #1e1e26, #262632);
   -fx-background-radius: 12;
   -fx-padding: 20px;
   -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 16, 0.4, 0, 4);
@@ -161,11 +161,11 @@
 /* -------------------------- */
 /* Profile Card Container */
 .player-status-card {
-  -fx-background-color: linear-gradient(to bottom, #1f1f1f, #292929);
+  -fx-background-color: linear-gradient(to bottom, #1e1e28, #252533);
   -fx-background-radius: 20;
   -fx-padding: 20;
   -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.5, 0, 4);
-  -fx-border-color: #404040;
+  -fx-border-color: #38385a;
   -fx-border-width: 2;
   -fx-border-radius: 20;
 }
@@ -213,9 +213,9 @@
 
 /* Hover Effects */
 .player-status-card:hover {
-  -fx-background-color: linear-gradient(to bottom, #5560f2, #6d7af3);
-  -fx-border-color: #7a82f5;
-  -fx-effect: dropshadow(gaussian, rgba(80, 100, 245, 0.8), 12, 0.6, 0, 4);
+  -fx-background-color: linear-gradient(to bottom, #22223a, #2a2a42);
+  -fx-border-color: #6d7af3;
+  -fx-effect: dropshadow(gaussian, rgba(80, 100, 245, 0.55), 18, 0.5, 0, 5);
 }
 
 /* Avatar Hover */
@@ -241,7 +241,7 @@
 }
 
 .progress-bar .track {
-  -fx-background-color: linear-gradient(to bottom, #1f1f1f, #292929);
+  -fx-background-color: linear-gradient(to bottom, #1e1e26, #262632);
   -fx-background-radius: 15px;
   -fx-padding: 2px;
 }
@@ -359,7 +359,7 @@
   -fx-font-weight: bold;
 }
 .alert-root {
-  -fx-background-color: linear-gradient(to bottom, #1f1f1f, #292929);
+  -fx-background-color: linear-gradient(to bottom, #1e1e26, #262632);
   -fx-background-radius: 12;
   -fx-padding: 20px;
   -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 16, 0.4, 0, 4);
@@ -372,7 +372,7 @@
 /* -------------------------- */
 
 .chatUI {
-  -fx-background-color: linear-gradient(to bottom, #1f1f1f, #292929);
+  -fx-background-color: linear-gradient(to bottom, #1e1e26, #262632);
   -fx-background-radius: 15;
   -fx-padding: 10;
   -fx-border-color: #404040;

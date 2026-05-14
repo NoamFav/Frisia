@@ -160,10 +160,9 @@ public class BotManager {
     public void triggerBotMoveR() {}
 
     public void loadLatestModel(Path savePath) {
-        try {
+        try (var files = Files.list(savePath)) {
             Optional<Path> latestFile =
-                    Files.list(savePath)
-                            .filter(path -> path.toString().endsWith(".bin"))
+                    files.filter(path -> path.toString().endsWith(".bin"))
                             .max(Comparator.comparingLong(path -> path.toFile().lastModified()));
 
             if (latestFile.isPresent()) {

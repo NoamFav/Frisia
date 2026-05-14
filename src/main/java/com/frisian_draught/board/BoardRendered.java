@@ -70,7 +70,7 @@ public class BoardRendered {
             for (int x = 0; x < boardState.getBoardSize().x; x++) {
                 Rectangle square =
                         new Rectangle(boardState.getTileSize(), boardState.getTileSize());
-                square.setFill((x + y) % 2 == 0 ? Color.WHITE : Color.BLACK);
+                square.setFill((x + y) % 2 == 0 ? Color.web("#f0d9b5") : Color.web("#b58863"));
                 boardState.getBoard().add(square, x, y);
                 boardState.getBoardTiles()[x][y] = square; // Keep a reference to each tile
             }

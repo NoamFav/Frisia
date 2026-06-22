@@ -1,8 +1,8 @@
 package com.frisian_draught.util;
 
+import com.frisian_draught.UserInfo;
 import com.moandjiezana.toml.Toml;
 import com.moandjiezana.toml.TomlWriter;
-import com.frisian_draught.UserInfo;
 
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -20,7 +20,7 @@ public class TomlLoader {
     // Path to external config file in the user's home directory.
     // Adjust this as needed for your app.
     private static final Path EXTERNAL_CONFIG_PATH =
-            Paths.get(System.getProperty("user.home"), ".frisian-draught", "info.toml");
+            Paths.get(System.getProperty("user.home"), ".dev", "frisian-draught", "info.toml");
 
     /**
      * Ensures that an external copy of info.toml exists in a writable location. Copies it from the

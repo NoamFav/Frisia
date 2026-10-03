@@ -1,25 +1,26 @@
-# 🎯 Frisia
-
 <div align="center">
-
-<img src="https://img.shields.io/badge/java-23+-ED8B00.svg?style=for-the-badge&logo=openjdk" alt="Java">
-<img src="https://img.shields.io/badge/javafx-22.0.1-blue.svg?style=for-the-badge" alt="JavaFX">
-<img src="https://img.shields.io/badge/maven-3.9-red.svg?style=for-the-badge&logo=apachemaven" alt="Maven">
-<img src="https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge" alt="License">
-
-**Modern Frisian Draughts with advanced AI and multiplayer**
-
-[Installation](#installation) · [How to Play](#how-to-play) · [Rules](#game-rules)
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/brand/banner-night.svg">
+  <img alt="Frisia: Frisian Draughts – A modern JavaFX-based take on the classic board game, featuring smart AI, multiplayer capabilities, tutorials, and customizable themes." src=".github/brand/banner-paper.svg" width="100%">
+</picture>
+<br><br>
+<a href="#prerequisites"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-prerequisites-night.svg"><img alt="prerequisites" src=".github/brand/tab-prerequisites-paper.svg"></picture></a>
+<a href="#installation"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-installation-night.svg"><img alt="installation" src=".github/brand/tab-installation-paper.svg"></picture></a>
+<a href="#how-to-play"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-how-to-play-night.svg"><img alt="how to play" src=".github/brand/tab-how-to-play-paper.svg"></picture></a>
+<a href="#game-rules"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-game-rules-night.svg"><img alt="game rules" src=".github/brand/tab-game-rules-paper.svg"></picture></a>
+<a href="#features"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-features-night.svg"><img alt="features" src=".github/brand/tab-features-paper.svg"></picture></a>
+<a href="#contributing"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-contributing-night.svg"><img alt="contributing" src=".github/brand/tab-contributing-paper.svg"></picture></a>
+<a href="#license"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-license-night.svg"><img alt="license" src=".github/brand/tab-license-paper.svg"></picture></a>
 </div>
 
----
+<br>
 
 Frisia is a full-featured implementation of Frisian Draughts built with JavaFX — featuring multiple AI difficulty levels, local multiplayer, interactive tutorials, light/dark themes, and sound effects.
 
----
-
-## Prerequisites
+<p>
+<a name="prerequisites"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-prerequisites-night.svg"><img alt="prerequisites" src=".github/brand/section-prerequisites-paper.svg" width="100%"></picture>
+</p>
 
 | Requirement | Version |
 |-------------|---------|
@@ -28,9 +29,10 @@ Frisia is a full-featured implementation of Frisian Draughts built with JavaFX �
 | JavaFX | 22.0.1 (included via Maven) |
 | Graphics | OpenGL 2.1+ |
 
----
-
-## Installation
+<p>
+<a name="installation"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-installation-night.svg"><img alt="installation" src=".github/brand/section-installation-paper.svg" width="100%"></picture>
+</p>
 
 ```bash
 git clone https://github.com/NoamFav/Frisia.git
@@ -45,9 +47,10 @@ mvn clean package -Djpackage.type=exe    # Windows
 mvn clean package -Djpackage.type=deb    # Linux
 ```
 
----
-
-## How to Play
+<p>
+<a name="how-to-play"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-how-to-play-night.svg"><img alt="how to play" src=".github/brand/section-how-to-play-paper.svg" width="100%"></picture>
+</p>
 
 | Key | Action |
 |-----|--------|
@@ -59,9 +62,10 @@ mvn clean package -Djpackage.type=deb    # Linux
 | H | Show hint |
 | Space | Pause AI thinking |
 
----
-
-## Game Rules
+<p>
+<a name="game-rules"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-game-rules-night.svg"><img alt="game rules" src=".github/brand/section-game-rules-paper.svg" width="100%"></picture>
+</p>
 
 Played on a **10×10 board**, dark squares only. Each player starts with **20 pieces**.
 
@@ -71,9 +75,10 @@ Played on a **10×10 board**, dark squares only. Each player starts with **20 pi
 - Win by eliminating all opponent pieces or blocking their moves
 - Capture priority given to moves with the highest piece value
 
----
-
-## Features
+<p>
+<a name="features"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-features-night.svg"><img alt="features" src=".github/brand/section-features-paper.svg" width="100%"></picture>
+</p>
 
 - Multiple AI difficulty levels (Minimax + alpha-beta pruning)
 - Local multiplayer
@@ -81,22 +86,31 @@ Played on a **10×10 board**, dark squares only. Each player starts with **20 pi
 - Light and dark themes
 - Sound effects (toggleable)
 
----
-
-## Contributing
+<p>
+<a name="contributing"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-contributing-night.svg"><img alt="contributing" src=".github/brand/section-contributing-paper.svg" width="100%"></picture>
+</p>
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes and open a Pull Request
 
----
-
-## License
+<p>
+<a name="license"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-license-night.svg"><img alt="license" src=".github/brand/section-license-paper.svg" width="100%"></picture>
+</p>
 
 MIT — see [LICENSE](LICENSE).
-
----
 
 <div align="center">
 Made with ❤️ by <a href="https://github.com/NoamFav">NoamFav</a>
 </div>
+
+<br>
+
+<a href="https://nf-software.com">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/brand/footer-night.svg">
+  <img alt="NF Software" src=".github/brand/footer-paper.svg" width="100%">
+</picture>
+</a>

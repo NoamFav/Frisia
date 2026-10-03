@@ -1,23 +1,25 @@
 <div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=venom&height=200&color=gradient&customColorList=12&text=FD-SERVER&fontSize=80&fontColor=fff&animation=twinkling&desc=Multiplayer+Relay+for+Frisian+Draughts&descSize=17&descAlignY=65&stroke=FFFFFF&strokeWidth=1" alt="FD-Server Banner" />
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=19&pause=1000&color=00D9FF&center=true&width=900&height=50&lines=Raw+TCP+sockets+%C2%B7+White%2FBlack%2FSpectator+%C2%B7+plain-text+protocol" alt="Typing SVG" />
-
-<br>
-
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&labelColor=0D1117)](https://openjdk.org)
-[![Fly.io](https://img.shields.io/badge/Fly.io-8B5CF6?style=for-the-badge&labelColor=0D1117)](https://fly.io)
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/brand/banner-night.svg">
+  <img alt="FD-Server: TCP multiplayer relay server for Frisia (Frisian Draughts) — assigns players to White/Black/Spectator and relays moves and chat." src=".github/brand/banner-paper.svg" width="100%">
+</picture>
+<br><br>
+<a href="#what-it-is"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-what-it-is-night.svg"><img alt="what it is" src=".github/brand/tab-what-it-is-paper.svg"></picture></a>
+<a href="#protocol"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-protocol-night.svg"><img alt="protocol" src=".github/brand/tab-protocol-paper.svg"></picture></a>
+<a href="#running-it"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/tab-running-it-night.svg"><img alt="running it" src=".github/brand/tab-running-it-paper.svg"></picture></a>
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-### What it is
+<p>
+<a name="what-it-is"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-what-it-is-night.svg"><img alt="what it is" src=".github/brand/section-what-it-is-paper.svg" width="100%"></picture>
+</p>
 
 The multiplayer backend for [Frisia](https://github.com/NoamFav/Frisia) (Frisian Draughts). A plain Java `ServerSocket` accepts connections, assigns each client a role — `White`, `Black`, or `Spectator` — and relays a small plain-text protocol between them: `MOVE`, `CHAT`, `READY`, `RESIGN`, `DRAW`, `DISCONNECT`. Deployed on Fly.io.
 
-### Protocol
+<p>
+<a name="protocol"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-protocol-night.svg"><img alt="protocol" src=".github/brand/section-protocol-paper.svg" width="100%"></picture>
+</p>
 
 | Command | Effect |
 |---------|--------|
@@ -27,7 +29,10 @@ The multiplayer backend for [Frisia](https://github.com/NoamFav/Frisia) (Frisian
 | `RESIGN` / `DRAW` | Broadcasts the game-ending event |
 | `DISCONNECT` | Closes the connection cleanly |
 
-### Running it
+<p>
+<a name="running-it"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/brand/section-running-it-night.svg"><img alt="running it" src=".github/brand/section-running-it-paper.svg" width="100%"></picture>
+</p>
 
 ```sh
 git clone https://github.com/NoamFav/FD-Server && cd FD-Server
@@ -36,9 +41,15 @@ mvn compile exec:java -Dexec.mainClass="com.server.MainServer"
 docker build -t fd-server . && docker run -p 9000:9000 fd-server
 ```
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
 <div align="center">
 Made with ♥ by <a href="https://github.com/NoamFav">NoamFav</a>
-<img src="https://capsule-render.vercel.app/api?type=waving&height=90&color=gradient&customColorList=12&section=footer" />
 </div>
+
+<br>
+
+<a href="https://nf-software.com">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/brand/footer-night.svg">
+  <img alt="NF Software" src=".github/brand/footer-paper.svg" width="100%">
+</picture>
+</a>
